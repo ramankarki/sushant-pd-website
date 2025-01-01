@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Ai Solutions</title>
+</head>
+
+<body class="font-sans">
+    <header class="bg-gray-800 text-white py-4 sticky top-0 z-50 shadow-lg">
+        <div class="container mx-auto flex justify-between items-center px-4">
+            <h1 class="text-xl font-bold">AI Solutions</h1>
+            <nav class="flex space-x-4">
+                <a href="index.html" class="hover:text-gray-300 transition duration-300">Home</a>
+                <a href="#services" class="hover:text-gray-300 transition duration-300">Services</a>
+                <a href="#events" class="hover:text-gray-300 transition duration-300">Events</a>
+                <a href="#gallery" class="hover:text-gray-300 transition duration-300">Gallery</a>
+                <a href="#feedback" class="hover:text-gray-300 transition duration-300">Feedback</a>
+                <a href="article.html" class="hover:text-gray-300 transition duration-300">Article</a>
+                <a href="contactus.html" target="_parent" class="hover:text-gray-300 transition duration-300">Contact
+                    Us</a>
+            </nav>
+        </div>
+    </header>
+
+    <section id="contact" class="py-20 bg-gray-50">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-6">Contact Us</h2>
+            <form id="contactForm" class="space-y-6 bg-white p-8 rounded-lg shadow-lg max-w-lg mx-auto">
+
+                <div class="flex flex-col items-start">
+                    <label for="name" class="mb-2 capitalize font-medium">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name"
+                        class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                </div>
+
+
+                <div class="flex flex-col items-start">
+                    <label for="email" class="mb-2 capitalize font-medium">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email"
+                        class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                </div>
+
+
+                <div class="flex flex-col items-start">
+                    <label for="phone" class="mb-2 capitalize font-medium">Phone</label>
+                    <input type="text" id="phone" name="phone" placeholder="Enter your phone number"
+                        class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                </div>
+
+
+                <div class="flex flex-col items-start">
+                    <label for="companyName" class="mb-2 capitalize font-medium">Company Name</label>
+                    <input type="text" id="companyName" name="companyName" placeholder="Enter your company name"
+                        class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                </div>
+
+
+                <div class="flex flex-col items-start">
+                    <label for="jobTitle" class="mb-2 capitalize font-medium">Job Title</label>
+                    <input type="text" id="jobTitle" name="jobTitle" placeholder="Enter your job title"
+                        class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                </div>
+
+
+                <div class="flex flex-col items-start">
+                    <label for="jobDetail" class="mb-2 capitalize font-medium">Job Detail</label>
+                    <input type="text" id="jobDetail" name="jobDetail" placeholder="Enter your job detail"
+                        class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                </div>
+
+
+                <div class="flex flex-col items-start">
+                    <label for="country" class="mb-2 capitalize font-medium">Country</label>
+                    <input type="text" id="country" name="country" placeholder="Enter your country"
+                        class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                </div>
+
+
+                <div class="flex flex-col items-start">
+                    <label for="subject" class="mb-2 capitalize font-medium">Subject</label>
+                    <input type="text" id="subject" name="subject" placeholder="Enter your subject"
+                        class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                </div>
+
+
+                <div class="flex flex-col items-start">
+                    <label for="message" class="mb-2 font-medium">Message</label>
+                    <textarea id="message" name="message" rows="4" placeholder="Enter your message"
+                        class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                </div>
+                <button type="submit" class="w-full px-6 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600">
+                    Submit
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <script>
+
+        const contactForm = document.getElementById('contactForm');
+
+        contactForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                companyName: document.getElementById('companyName').value,
+                jobTitle: document.getElementById('jobTitle').value,
+                jobDetail: document.getElementById('jobDetail').value,
+                country: document.getElementById('country').value,
+                subject: document.getElementById('subject').value,
+                message: document.getElementById('message').value,
+            };
+            alert(`Thank you, ${formData.name}`);
+        });
+    </script>
+
+    <footer class="bg-gray-800 text-white py-4 text-center">
+        <p>&copy; 2024 AI Solutions. All Rights Reserved.</p>
+    </footer>
+</body>
+
+</html>
